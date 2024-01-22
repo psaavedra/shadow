@@ -223,11 +223,11 @@ static inline void memzero(void *ptr, size_t size)
 
 /* To be used for verified unused parameters */
 #if defined(__GNUC__) && !defined(__STRICT_ANSI__)
-# define unused    __attribute__((unused))
+# define UNUSED    __attribute__((unused))
 # define NORETURN  __attribute__((__noreturn__))
 # define format_attr(type, index, check) __attribute__((format (type, index, check)))
 #else
-# define unused
+# define UNUSED
 # define NORETURN
 # define format_attr(type, index, check)
 #endif

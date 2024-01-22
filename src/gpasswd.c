@@ -94,14 +94,14 @@ static void update_group (struct group *gr);
 static void change_passwd (struct group *gr);
 #endif
 static void log_gpasswd_failure (const char *suffix);
-static void log_gpasswd_failure_system (/*@null@*/unused void *arg);
-static void log_gpasswd_failure_group (/*@null@*/unused void *arg);
+static void log_gpasswd_failure_system (/*@null@*/UNUSED void *arg);
+static void log_gpasswd_failure_group (/*@null@*/UNUSED void *arg);
 #ifdef SHADOWGRP
-static void log_gpasswd_failure_gshadow (/*@null@*/unused void *arg);
+static void log_gpasswd_failure_gshadow (/*@null@*/UNUSED void *arg);
 #endif
 static void log_gpasswd_success (const char *suffix);
-static void log_gpasswd_success_system (/*@null@*/unused void *arg);
-static void log_gpasswd_success_group (/*@null@*/unused void *arg);
+static void log_gpasswd_success_system (/*@null@*/UNUSED void *arg);
+static void log_gpasswd_success_group (/*@null@*/UNUSED void *arg);
 
 /*
  * usage - display usage message
@@ -486,12 +486,12 @@ static void log_gpasswd_failure (const char *suffix)
 	}
 }
 
-static void log_gpasswd_failure_system (unused void *arg)
+static void log_gpasswd_failure_system (UNUSED void *arg)
 {
 	log_gpasswd_failure ("");
 }
 
-static void log_gpasswd_failure_group (unused void *arg)
+static void log_gpasswd_failure_group (UNUSED void *arg)
 {
 	char buf[1024];
 	snprintf (buf, 1023, " in %s", gr_dbname ());
@@ -500,7 +500,7 @@ static void log_gpasswd_failure_group (unused void *arg)
 }
 
 #ifdef SHADOWGRP
-static void log_gpasswd_failure_gshadow (unused void *arg)
+static void log_gpasswd_failure_gshadow (UNUSED void *arg)
 {
 	char buf[1024];
 	snprintf (buf, 1023, " in %s", sgr_dbname ());
@@ -620,12 +620,12 @@ static void log_gpasswd_success (const char *suffix)
 	}
 }
 
-static void log_gpasswd_success_system (unused void *arg)
+static void log_gpasswd_success_system (UNUSED void *arg)
 {
 	log_gpasswd_success ("");
 }
 
-static void log_gpasswd_success_group (unused void *arg)
+static void log_gpasswd_success_group (UNUSED void *arg)
 {
 	char buf[1024];
 	snprintf (buf, 1023, " in %s", gr_dbname ());

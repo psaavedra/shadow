@@ -96,11 +96,11 @@ void cleanup_report_del_group_gshadow (void *group_name);
 void cleanup_report_mod_passwd (void *cleanup_info);
 void cleanup_report_mod_group (void *cleanup_info);
 void cleanup_report_mod_gshadow (void *cleanup_info);
-void cleanup_unlock_group (/*@null@*/void *unused);
+void cleanup_unlock_group (/*@null@*/void *UNUSED);
 #ifdef SHADOWGRP
-void cleanup_unlock_gshadow (/*@null@*/void *unused);
+void cleanup_unlock_gshadow (/*@null@*/void *UNUSED);
 #endif
-void cleanup_unlock_passwd (/*@null@*/void *unused);
+void cleanup_unlock_passwd (/*@null@*/void *UNUSED);
 
 /* console.c */
 extern bool console (const char *);

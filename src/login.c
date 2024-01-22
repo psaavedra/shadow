@@ -393,12 +393,12 @@ static void init_env (void)
 #endif				/* !USE_PAM */
 }
 
-static void exit_handler (unused int sig)
+static void exit_handler (UNUSED int sig)
 {
 	_exit (0);
 }
 
-static void alarm_handler (unused int sig)
+static void alarm_handler (UNUSED int sig)
 {
 	write_full (STDERR_FILENO, tmsg, strlen (tmsg));
 	signal(SIGALRM, exit_handler);

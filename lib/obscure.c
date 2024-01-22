@@ -32,7 +32,7 @@
 /*
  * can't be a palindrome - like `R A D A R' or `M A D A M'
  */
-static bool palindrome (unused const char *old, const char *new)
+static bool palindrome (UNUSED const char *old, const char *new)
 {
 	size_t i, j;
 

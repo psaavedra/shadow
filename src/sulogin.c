@@ -43,7 +43,7 @@ extern size_t newenvc;
 /* local function prototypes */
 static void catch_signals (int);
 
-static void catch_signals (unused int sig)
+static void catch_signals (UNUSED int sig)
 {
 	_exit (1);
 }
